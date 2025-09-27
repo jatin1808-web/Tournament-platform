@@ -3,32 +3,24 @@
 import { useState } from 'react'
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState('all')
-  const [user, setUser] = useState(null)
-  const [showAuth, setShowAuth] = useState(false)
-
-  const tournaments = [
+  const [tournaments] = useState([
     {
       id: 1,
       name: 'Valorant Weekly Cup',
-      game: 'valorant',
+      game: 'Valorant', 
       teams: 8,
       prize: '$500',
-      date: '2024-01-15',
-      status: 'registration',
-      image: '🎯'
+      date: '2024-01-15'
     },
     {
-      id: 2, 
-      name: 'Fortnite Duos Tournament',
-      game: 'fortnite',
+      id: 2,
+      name: 'Fortnite Duos Tournament', 
+      game: 'Fortnite',
       teams: 16,
       prize: '$1000',
-      date: '2024-01-20',
-      status: 'registration',
-      image: '🏹'
+      date: '2024-01-20'
     }
-  ]
+  ])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-blue-900">
@@ -44,13 +36,13 @@ export default function Home() {
       </header>
 
       <main className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {tournaments.map(tournament => (
             <div key={tournament.id} className="bg-gray-800/50 backdrop-blur rounded-lg p-6 border border-gray-700">
               <h3 className="text-xl font-bold text-white mb-2">{tournament.name}</h3>
-              <p className="text-gray-300 mb-2">Game: {tournament.game}</p>
-              <p className="text-gray-300 mb-4">Prize: {tournament.prize}</p>
-              <button className="w-full bg-blue-600 text-white py-2 rounded-lg">
+              <p className="text-gray-300">Game: {tournament.game}</p>
+              <p className="text-gray-300">Prize: {tournament.prize}</p>
+              <button className="w-full bg-blue-600 text-white py-2 rounded-lg mt-4">
                 Register Now
               </button>
             </div>
