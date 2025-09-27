@@ -1,8 +1,8 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Tournament Platform',
-  description: 'Host and compete in esports tournaments',
+  title: 'Elite eSports - Where Champions Are Born',
+  description: 'Premium Free Fire MAX & BGMI tournaments with massive prize pools. Your path to pro gaming starts here!',
 }
 
 export default function RootLayout({
@@ -12,7 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="bg-black text-white">{children}</body>
     </html>
   )
 }
