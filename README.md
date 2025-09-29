@@ -1,2 +1,2 @@
-# Tournament-platform
+# Elite eSports 
 Game tournaments
